@@ -14,8 +14,7 @@ async def approve_request(chat_join: ChatJoinRequest, bot: Bot):
         await chat_join.approve()
         await bot.send_message(
             chat_id=chat_join.from_user.id,
-            text="✅ Заявка одобрена! Добро пожаловать в канал.
-            https://t.me/+NJWfkT3Mjlk0NzBi"
+            text="✅ Заявка одобрена! Добро пожаловать в канал https://t.me/+NJWfkT3Mjlk0NzBi"
         )
         logging.info(f"Одобрена заявка от {chat_join.from_user.id}")
     except Exception as e:
@@ -46,3 +45,4 @@ async def main():
 if __name__ == "__main__":
 
     asyncio.run(main())
+
